@@ -115,6 +115,7 @@ graph TD
     H["原始日志达到阈值"] --> I["史官 AI 压缩"]
     I --> J["存入中长期摘要表"]
     end
+```
 
 \## 快速运行
 
@@ -123,6 +124,7 @@ graph TD
 pip install -r requirements.txt
 
 python tgma_memory_engine.py
+
 
 
 
