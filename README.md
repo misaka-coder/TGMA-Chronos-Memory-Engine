@@ -100,7 +100,20 @@ TGMA = Temporal-Grounded Memory Architecture
 
 ---
 
-
+## 🎨 架构逻辑示意图
+```mermaid
+graph TD
+    A[用户输入: 昨晚我熬夜了吗?] --> B{主脑 Akane 思考}
+    B -->|近期记忆不足| C[触发 [RECALL] 拦截]
+    C --> D[侦探打捞: 提取指定日期日志]
+    D --> E[精准证据: 23:45 记录到 Master 在敲代码]
+    E --> F[事实反馈给主脑]
+    F --> G[最终回复: 哼, 昨晚 11 点多你还在卷, 快去补觉!]
+    
+    subgraph 异步记忆代谢
+    H[原始日志达到阈值] --> I[史官 AI 压缩]
+    I --> J[存入中长期摘要表]
+    end
 
 \## 快速运行
 
@@ -109,5 +122,6 @@ TGMA = Temporal-Grounded Memory Architecture
 pip install -r requirements.txt
 
 python tgma_memory_engine.py
+
 
 
