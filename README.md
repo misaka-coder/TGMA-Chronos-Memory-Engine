@@ -108,5 +108,6 @@ TGMA = Temporal-Grounded Memory Architecture
 
 pip install -r requirements.txt
 
-python tgma\_memory\_engine.py
+python tgma_memory_engine.py
+
 
